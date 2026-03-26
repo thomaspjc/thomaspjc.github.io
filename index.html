@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Jogand-Coulomb</title>
+  <meta name="description" content="Thomas Jogand-Coulomb | Physics PhD student working on accelerator physics, beam shaping, photoinjectors, and computational optics." />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #111a2b;
+      --panel: rgba(255,255,255,0.05);
+      --panel-strong: rgba(255,255,255,0.08);
+      --text: #e8edf7;
+      --muted: #b5c0d4;
+      --accent: #8ab4ff;
+      --accent-2: #7ee0c3;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --maxw: 1100px;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(138,180,255,0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(126,224,195,0.10), transparent 25%),
+        linear-gradient(180deg, #09101d 0%, #0b1220 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(11,18,32,0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 6rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 60ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      font-weight: 600;
+      transition: 0.2s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+      background: var(--panel-strong);
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, rgba(138,180,255,0.22), rgba(126,224,195,0.18));
+      border-color: rgba(138,180,255,0.35);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+
+    .stat {
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 2rem 0 0;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 72ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.2rem;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .col-4 {
+      grid-column: span 4;
+    }
+
+    .col-6 {
+      grid-column: span 6;
+    }
+
+    .col-8 {
+      grid-column: span 8;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(138,180,255,0.10);
+      border: 1px solid rgba(138,180,255,0.20);
+      color: #d8e6ff;
+      font-size: 0.88rem;
+    }
+
+    .project-meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      padding: 1.1rem 1.2rem;
+      border-left: 2px solid rgba(138,180,255,0.35);
+      background: rgba(255,255,255,0.04);
+      border-radius: 0 16px 16px 0;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .footer {
+      padding: 4rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 3rem 0 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .col-4, .col-6, .col-8 {
+        grid-column: span 12;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">Thomas Jogand-Coulomb</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Physics PhD Student · Accelerator Physics · Computational Optics</div>
+        <h1>Building beam-shaping tools for next-generation accelerators.</h1>
+        <p>
+          I am a Physics PhD student at the University of Chicago working at the intersection of
+          accelerator physics, photoinjectors, computational optics, and scientific computing.
+          My work focuses on laser shaping, phase plate design, and beam quality improvement for
+          high-brightness electron sources.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button" href="#resume">See Resume</a>
+          <a class="button" href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Current Focus</h3>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>Phase plate beam shaping</strong>
+            <span>Custom UV beam shaping for photoinjector applications</span>
+          </div>
+          <div class="stat">
+            <strong>Accelerator R&amp;D</strong>
+            <span>Transitioning toward electron and proton beam dynamics work at IOTA</span>
+          </div>
+          <div class="stat">
+            <strong>Scientific computing</strong>
+            <span>Python-based simulation, optimization, and data analysis workflows</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-copy">
+          My research sits between experiment, simulation, and design. I build computational tools
+          for structured laser shaping, study how those profiles influence electron beam formation,
+          and work toward practical accelerator applications where beam quality and stability matter.
+          More broadly, I am interested in accelerator science, beam physics, laser-based control,
+          and the use of optimization and machine learning in physical systems.
+        </p>
+
+        <div class="card-grid">
+          <div class="card col-6">
+            <h3>Research Interests</h3>
+            <p>
+              Accelerator physics, photoinjectors, beam dynamics, optical stochastic cooling,
+              computational optics, inverse design, optimization, and scientific machine learning.
+            </p>
+          </div>
+          <div class="card col-6">
+            <h3>Technical Toolkit</h3>
+            <p>
+              Python, NumPy, SciPy, Matplotlib, HDF5, optimization workflows, Fresnel propagation,
+              Fourier optics, data analysis, simulation pipelines, and scientific visualization.
+            </p>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">Accelerator Physics</span>
+          <span class="tag">Beam Shaping</span>
+          <span class="tag">Photoinjectors</span>
+          <span class="tag">Fresnel Propagation</span>
+          <span class="tag">Optimization</span>
+          <span class="tag">Scientific Python</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
+        <p class="section-copy">
+          My current work centers on shaping ultraviolet laser profiles with nanofabricated phase
+          plates to improve transverse emittance in electron sources. I am also expanding into new
+          accelerator research directions involving beam physics and amplified optical stochastic cooling.
+        </p>
+
+        <div class="card-grid">
+          <article class="card col-6">
+            <h3>UV Phase Plates for Photoinjectors</h3>
+            <p class="project-meta">University of Chicago · Argonne · SLAC</p>
+            <p>
+              Designing and testing fused-silica phase plates that transform Gaussian laser beams
+              into profiles better suited for photocathode operation, with the goal of improving
+              beam uniformity and reducing emittance.
+            </p>
+          </article>
+
+          <article class="card col-6">
+            <h3>Computational Beam Propagation and Inverse Design</h3>
+            <p class="project-meta">Simulation and optimization</p>
+            <p>
+              Building Python workflows for Fresnel propagation, target matching, and structured phase
+              retrieval to connect optical design choices with experimentally relevant beam profiles.
+            </p>
+          </article>
+
+          <article class="card col-12">
+            <h3>Transition Toward Beam Physics at IOTA</h3>
+            <p class="project-meta">New direction</p>
+            <p>
+              I am moving from the photoinjector and laser-shaping side of accelerator science toward
+              broader beam physics questions, including work in Jonathan Jarvis’ group at IOTA on
+              amplified optical stochastic cooling. This transition reflects my long-term goal of
+              contributing across the full beamline, from source development to beam manipulation and control.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-copy">
+          Replace the placeholder links below with your repositories, papers, proceedings, or talks.
+        </p>
+
+        <div class="card-grid">
+          <article class="card col-4">
+            <h3>Phase Plate Design Pipeline</h3>
+            <p>
+              Numerical design workflow for phase masks using iterative optimization and Fourier/Fresnel propagation.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card col-4">
+            <h3>Beam Analysis Tools</h3>
+            <p>
+              Data analysis scripts for beam imaging, profile fitting, centroiding, truncation metrics, and visualization.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card col-4">
+            <h3>Optimization for Optical Design</h3>
+            <p>
+              Exploration of hybrid optimization strategies for inverse optical design and fabrication-aware objectives.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card col-6">
+            <h3>Conference Proceedings / Publications</h3>
+            <p>
+              Add your proceedings, abstracts, manuscripts, or posters here so the page also functions
+              as a lightweight academic portfolio.
+            </p>
+            <div class="project-links">
+              <a href="#">Paper Link</a>
+              <a href="#">Proceedings</a>
+            </div>
+          </article>
+
+          <article class="card col-6">
+            <h3>Teaching and Academic Materials</h3>
+            <p>
+              You can also use this section for teaching work, notes, computational notebooks, or public-facing course materials.
+            </p>
+            <div class="project-links">
+              <a href="#">Course Materials</a>
+              <a href="#">Notes</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Physics PhD Student · University of Chicago</strong>
+            Research in accelerator physics, beam shaping, photoinjectors, and computational optics.
+          </div>
+          <div class="timeline-item">
+            <strong>Collaborative Work with National Labs</strong>
+            Research connections involving Argonne and SLAC on beam shaping, diagnostics, and accelerator applications.
+          </div>
+          <div class="timeline-item">
+            <strong>Teaching Assistant</strong>
+            Introductory mechanics and electricity &amp; magnetism instruction, problem solving, and student support.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <p class="section-copy">
+          Put your PDF in the same GitHub Pages repository and name it <code>resume.pdf</code>.
+        </p>
+        <div class="card">
+          <h3>Download Resume</h3>
+          <p>
+            <a class="button primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">Open Resume PDF</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="card-grid">
+          <div class="card col-8">
+            <h3>Get in touch</h3>
+            <p>
+              The cleanest version of this section is usually just email, GitHub, and LinkedIn.
+              That keeps the page professional and resume-friendly.
+            </p>
+            <div class="project-links">
+              <a href="mailto:your.email@example.com">your.email@example.com</a>
+              <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/YOURUSERNAME/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          <div class="card col-4">
+            <h3>Location</h3>
+            <p>Chicago, Illinois</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider container"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Thomas Jogand-Coulomb. Built with simple HTML/CSS for GitHub Pages.
+    </div>
+  </footer>
+</body>
+</html>
