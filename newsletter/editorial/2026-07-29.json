@@ -1,16 +1,12 @@
 {
-  "layout": "briefing",
-  "theme": "newsprint",
-  "headline": "Optical Stochastic Cooling Paves Way for Kilowatt\u2011Level EUV Light Sources",
-  "deck": "A series of recent studies converge on a compact storage\u2011ring design that combines optical stochastic cooling with steady\u2011state microbunching, promising unprecedented EUV photon flux for advanced spectroscopy and materials research.",
+  "layout": "feature",
+  "theme": "midnight",
+  "headline": "Optical Stochastic Cooling Advances: Fermilab\u2019s IOTA Ring Demonstrates Microbunching and Multi\u2011Dimensional Cooling",
+  "deck": "The latest experiments at Fermilab\u2019s IOTA storage ring confirm the theoretical predictions of optical stochastic cooling (OSC), achieving steady\u2011state microbunching through Optical Stochastic Crystallization and demonstrating significant cooling in all three phase\u2011space dimensions. These results pave the way for enhanced beam\u2011damping techniques in future accelerator facilities.",
   "hero_paper_id": null,
   "section_order": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6"
+    "primary",
+    "secondary"
   ],
   "pull_quote": null,
   "show_hero_figure": true,
