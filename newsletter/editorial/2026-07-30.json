@@ -1,0 +1,14 @@
+{
+  "layout": "classic",
+  "theme": "newsprint",
+  "headline": "Analytic 3\u2011D FEL Model Paves Way for Advanced Coherent Electron Cooling",
+  "deck": "A new theoretical framework delivers Green\u2011function solutions for small\u2011signal free\u2011electron lasers, offering precise benchmarks for coherent electron cooling systems and guiding future accelerator designs.",
+  "hero_paper_id": null,
+  "section_order": [
+    "primary",
+    "secondary"
+  ],
+  "pull_quote": null,
+  "show_hero_figure": true,
+  "compact_secondary_papers": false
+}
