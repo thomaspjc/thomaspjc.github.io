@@ -1,0 +1,18 @@
+{
+  "layout": "briefing",
+  "theme": "newsprint",
+  "headline": "Optical Stochastic Cooling Paves Way for Kilowatt\u2011Level EUV Light Sources",
+  "deck": "A series of recent studies converge on a compact storage\u2011ring design that combines optical stochastic cooling with steady\u2011state microbunching, promising unprecedented EUV photon flux for advanced spectroscopy and materials research.",
+  "hero_paper_id": null,
+  "section_order": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "pull_quote": null,
+  "show_hero_figure": true,
+  "compact_secondary_papers": false
+}
