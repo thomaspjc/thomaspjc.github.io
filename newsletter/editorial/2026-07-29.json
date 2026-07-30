@@ -1,12 +1,12 @@
 {
-  "layout": "feature",
-  "theme": "midnight",
-  "headline": "Optical Stochastic Cooling Advances: Fermilab\u2019s IOTA Ring Demonstrates Microbunching and Multi\u2011Dimensional Cooling",
-  "deck": "The latest experiments at Fermilab\u2019s IOTA storage ring confirm the theoretical predictions of optical stochastic cooling (OSC), achieving steady\u2011state microbunching through Optical Stochastic Crystallization and demonstrating significant cooling in all three phase\u2011space dimensions. These results pave the way for enhanced beam\u2011damping techniques in future accelerator facilities.",
+  "layout": "briefing",
+  "theme": "newsprint",
+  "headline": "Optical Stochastic Cooling Advances: New Amplifier Design and IOTA Facility Progress",
+  "deck": "A recent series of studies has refined the technology behind optical stochastic cooling, introducing a Cr:ZnSe single\u2011pass amplifier to boost undulator radiation and detailing the design and experimental agenda of Fermilab\u2019s Integrable Optics Test Accelerator (IOTA). Together, these developments bring the community closer to realizing high\u2011efficiency cooling for next\u2011generation accelerators.",
   "hero_paper_id": null,
   "section_order": [
-    "primary",
-    "secondary"
+    "1. A Single-pass Cr:ZnSe Amplifier for Broadband Infrared Undulator Radiation",
+    "2. IOTA (Integrable Optics Test Accelerator): Facility and Experimental Beam Physics Program"
   ],
   "pull_quote": null,
   "show_hero_figure": true,
