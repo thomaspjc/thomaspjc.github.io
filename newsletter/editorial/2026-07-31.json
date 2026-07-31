@@ -1,0 +1,14 @@
+{
+  "layout": "briefing",
+  "theme": "newsprint",
+  "headline": "IOTA Ring Advances Optical Stochastic Cooling",
+  "deck": "Fermilab\u2019s Integrable Optics Test Accelerator delivers new design insights and simulation results that pave the way for amplified stochastic oscillators and next\u2011generation beam cooling techniques.",
+  "hero_paper_id": null,
+  "section_order": [
+    "Primary",
+    "Secondary"
+  ],
+  "pull_quote": null,
+  "show_hero_figure": true,
+  "compact_secondary_papers": false
+}
