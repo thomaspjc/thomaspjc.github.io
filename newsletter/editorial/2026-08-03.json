@@ -1,0 +1,14 @@
+{
+  "layout": "classic",
+  "theme": "newsprint",
+  "headline": "Optical Cooling Breakthrough: Enhanced Scheme Promises Faster Ion Beam Damping at the LHC",
+  "deck": "A new study demonstrates that an enhanced optical cooling approach can dramatically improve the damping of lead ions in the Large Hadron Collider, offering a viable path toward higher luminosity and more efficient beam handling.",
+  "hero_paper_id": null,
+  "section_order": [
+    "primary",
+    "secondary"
+  ],
+  "pull_quote": null,
+  "show_hero_figure": true,
+  "compact_secondary_papers": false
+}
