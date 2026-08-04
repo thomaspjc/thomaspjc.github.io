@@ -1,0 +1,14 @@
+{
+  "layout": "briefing",
+  "theme": "newsprint",
+  "headline": "Reinforcement Learning Takes the Lead: Autonomous Beam\u2011Splitting Control at CERN\u2019s Proton Synchrotron",
+  "deck": "A new study demonstrates that a deep\u2011learning controller can achieve the precise 25\u202fns bunch spacing required for the LHC in fewer than ten iterations, marking a milestone for AI\u2011driven accelerator operations.",
+  "hero_paper_id": null,
+  "section_order": [
+    "primary",
+    "secondary"
+  ],
+  "pull_quote": null,
+  "show_hero_figure": true,
+  "compact_secondary_papers": false
+}
